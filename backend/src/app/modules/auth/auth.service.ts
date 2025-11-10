@@ -15,6 +15,10 @@ const loginUser = async (payload: any) => {
     throw new Error("Password is incorrect!");
   }
 
+  if(isUserExist.status === "blocked"){
+    throw new Error("Your account has been blocked. Please contact support!.");
+  }
+
   const jwtPayload = {
     email: isUserExist.email,
     role: isUserExist.role,
