@@ -1,6 +1,6 @@
 import express, { Application } from "express";
-import router from "./routes";
-import notFoundRoute from "./middleware/notFoundRoute";
+import router from "./app/routes";
+import notFoundRoute from "./app/middleware/notFoundRoute";
 const app: Application = express();
 
 // middleware
